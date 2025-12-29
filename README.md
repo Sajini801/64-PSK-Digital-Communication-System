@@ -1,7 +1,7 @@
 # 64-PSK Digital Communication System 
 
 ## Overview
-This project implements and analyses a **64-Phase Shift Keying (64-PSK)** digital communication system using MATLAB.  
+This project implements and analyses a 64-Phase Shift Keying (64-PSK) digital communication system using MATLAB.  
 The system models the complete transmission chain, including vector encoding, modulation, transmission over an AWGN channel, demodulation and optimal detection at the receiver.
 The project focuses on constellation-based analysis to visualise the impact of noise and attenuation on signal integrity.
 
@@ -17,7 +17,7 @@ The project focuses on constellation-based analysis to visualise the impact of n
 ---
 
 ## Theory Background
-64-PSK is an N-ary digital modulation technique where information is encoded in the **phase** of a carrier signal.  
+64 PSK is an N-ary digital modulation technique where information is encoded in the **phase** of a carrier signal.  
 Each symbol represents 6 bits of information. In an ideal channel, all symbols lie on a circle of fixed radius in the complex plane.  
 In practical channels, attenuation reduces signal amplitude and noise introduces random changes, affecting detection performance.
 
@@ -31,7 +31,7 @@ The communication system is modelled as:
 - Additive noise: `n`
 - Received symbol: `r = αs + n`
 
-This model displays amplitude reduction and noise corruption commonly observed in real-world communication channels.
+This model displays amplitude reduction and noise corruption commonly observed in real world communication channels.
 
 ---
 
@@ -39,7 +39,7 @@ This model displays amplitude reduction and noise corruption commonly observed i
 - Binary input recieving
 - Vector encoding into 6-bit symbols
 - Gray code mapping
-- 64-PSK modulation using complex exponentials
+- 64 PSK modulation using complex exponentials
 - AWGN channel simulation with attenuation
 - Constellation plotting with consistent axis scaling
 - Maximum Likelihood (ML) symbol detection
@@ -48,9 +48,9 @@ This model displays amplitude reduction and noise corruption commonly observed i
 ---
 
 ## Results and Observations
-- The transmitted constellation forms a **uniform circular pattern**
-- The received constellation exhibits a **reduced radius** due to attenuation
-- Noise causes **symbol spreading**, increasing overlap between decision regions
+- The transmitted constellation forms a uniform circular pattern
+- The received constellation exhibits a reduced radius due to attenuation
+- Noise causes symbol spreading, increasing overlap between decision regions
 - Using identical plot scaling highlights physical channel effects clearly
 - ML detection provides optimal symbol decisions under AWGN conditions
 
@@ -79,12 +79,6 @@ The received complex symbols are processed to estimate their phases and map them
 ### Maximum Likelihood (ML) Detection
 Each received symbol is compared to all possible constellation points, and the symbol with the minimum Euclidean distance is selected.
 
----
 
-## Software & Tools
-- MATLAB
-- Signal Processing Toolbox (optional)
-- Digital communications modelling
-- Complex baseband signal processing
 
 
