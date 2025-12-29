@@ -7,7 +7,7 @@ The project focuses on constellation-based analysis to visualise the impact of n
 
 
 ## Objectives
-- Implement a complete 64-PSK modulation and demodulation chain
+- Implement a complete 64 PSK modulation and demodulation chain
 - Apply vector encoding and Gray code mapping to binary input data
 - Model an AWGN channel with attenuation
 - Perform Maximum Likelihood (ML) detection
