@@ -1,7 +1,7 @@
 # 64-PSK Digital Communication System 
 
 ## Overview
-This project implements and analyses a 64-Phase Shift Keying (64-PSK) digital communication system using MATLAB.  
+This project implements and analyses a 64 Phase Shift Keying (64 PSK) digital communication system using MATLAB.  
 The system models the complete transmission chain, including vector encoding, modulation, transmission over an AWGN channel, demodulation and optimal detection at the receiver.
 The project focuses on constellation-based analysis to visualise the impact of noise and attenuation on signal integrity.
 
@@ -17,7 +17,7 @@ The project focuses on constellation-based analysis to visualise the impact of n
 ---
 
 ## Theory Background
-64 PSK is an N-ary digital modulation technique where information is encoded in the **phase** of a carrier signal.  
+64 PSK is a digital modulation technique where information is encoded in the **phase** of a carrier signal.  
 Each symbol represents 6 bits of information. In an ideal channel, all symbols lie on a circle of fixed radius in the complex plane.  
 In practical channels, attenuation reduces signal amplitude and noise introduces random changes, affecting detection performance.
 
@@ -26,10 +26,10 @@ In practical channels, attenuation reduces signal amplitude and noise introduces
 ## System Model
 The communication system is modelled as:
 
-- Transmitted symbol: `s`
-- Channel attenuation: `α`
-- Additive noise: `n`
-- Received symbol: `r = αs + n`
+- Transmitted symbol: s
+- Channel attenuation: α
+- Additive noise: n
+- Received symbol: r = αs + n
 
 This model displays amplitude reduction and noise corruption commonly observed in real world communication channels.
 
@@ -37,7 +37,7 @@ This model displays amplitude reduction and noise corruption commonly observed i
 
 ## Implemented Features
 - Binary input recieving
-- Vector encoding into 6-bit symbols
+- Vector encoding into 6bit symbols
 - Gray code mapping
 - 64 PSK modulation using complex exponentials
 - AWGN channel simulation with attenuation
@@ -68,7 +68,7 @@ The symbol groups are Gray-coded so that adjacent constellation points differ by
 Each Gray coded symbol index is mapped to a complex exponential with fixed magnitude and unique phase, producing a complex valued symbol array.
 
 ### Constellation Representation
-The modulated symbols are represented in the I-Q plane, allowing visual inspection of phase separation and noise sensitivity.
+The modulated symbols are represented in the I,Q plane, allowing visual inspection of phase separation and noise sensitivity.
 
 ### AWGN Channel
 Complex Gaussian noise is added to each transmitted symbol, spreading the constellation points and modelling real-world channel impairments.
