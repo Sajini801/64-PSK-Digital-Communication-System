@@ -59,19 +59,19 @@ This model displays amplitude reduction and noise corruption commonly observed i
 ## System Processing Stages
 
 ### Vector Encoding
-The input bitstream is grouped into 6-bit blocks and converted into a symbol index array ranging from 0 to 63.
+The input bitstream is grouped into 6bit blocks and converted into a symbol index array ranging from 0 to 63.
 
 ### Gray Coding
 The symbol groups are Gray-coded so that adjacent constellation points differ by only one bit, reducing the impact of symbol decision errors.
 
-### Modulation (64-PSK)
+### Modulation (64 PSK)
 Each Gray coded symbol index is mapped to a complex exponential with fixed magnitude and unique phase, producing a complex valued symbol array.
 
 ### Constellation Representation
 The modulated symbols are represented in the I,Q plane, allowing visual inspection of phase separation and noise sensitivity.
 
 ### AWGN Channel
-Complex Gaussian noise is added to each transmitted symbol, spreading the constellation points and modelling real-world channel impairments.
+Complex Gaussian noise is added to each transmitted symbol, spreading the constellation points and modelling real world channel impairments.
 
 ### Demodulation
 The received complex symbols are processed to estimate their phases and map them back to symbol indices.
