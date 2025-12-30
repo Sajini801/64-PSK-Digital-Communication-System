@@ -3,7 +3,7 @@
 ## Overview
 This project implements and analyses a 64 Phase Shift Keying (64 PSK) digital communication system using MATLAB.  
 The system models the complete transmission chain, including vector encoding, modulation, transmission over an AWGN channel, demodulation and optimal detection at the receiver.
-The project focuses on constellation-based analysis to visualise the impact of noise and attenuation on signal integrity.
+The project focuses on constellation based analysis to visualise the impact of noise and attenuation on signal integrity.
 
 
 ## Objectives
@@ -59,10 +59,12 @@ This model displays amplitude reduction and noise corruption commonly observed i
 ## System Processing Stages
 
 ### Vector Encoding
-The input bitstream is grouped into 6bit blocks and converted into a symbol index array ranging from 0 to 63.
+The input binary stream is seperated into 6 bit blocks, with each block representing one symbol in the 64 PSK constellation.  
+A predefined Gray code lookup table is used to map each 6 bit pattern to a symbol index from 0 to 63 which corresponds to a specific constellation point.  
+For each 6 bit block, the matching Gray code is identified and the associated symbol index is assigned to the array, which is then used for modulation.
 
 ### Gray Coding
-The symbol groups are Gray-coded so that adjacent constellation points differ by only one bit, reducing the impact of symbol decision errors.
+The symbol groups are Gray coded so that adjacent constellation points differ by only one bit, reducing the impact of symbol decision errors.
 
 ### Modulation (64 PSK)
 Each Gray coded symbol index is mapped to a complex exponential with fixed magnitude and unique phase, producing a complex valued symbol array.
